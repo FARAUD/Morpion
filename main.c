@@ -69,7 +69,7 @@ void jeu (char grille[N][N+1]) {
     {
         printf ("\n Ou voulez vouz jouer ? : ");
         scanf ("%d %d",&i,&j);
-        if (grille[i-1][j-1]=='-' && i<N && j<N)
+        if (grille[i-1][j-1]=='-' && i<=N && j<=N)
         {
             if (k%2==0){
                 grille[i-1][j-1]='X';  //Le premier joueur prend les X
@@ -85,15 +85,18 @@ void jeu (char grille[N][N+1]) {
     }
 }
 
-void test (char grille[N][N+1]) {
+void test(char grille[N][N+1])
+{
     int i,j;
     for (i=0;i<N;i++){
         for (j=0;j<N;j++){
-            if (grille [i][j]=='X' || grille [i][j]=='O')
-                return 0;
+            if (grille [i][j]=='-'){
+                return 1;
+            }
         }
     }
-    return 1;
+    printf ("\n Toutes les cases sont occupees.\n");
+    return 0;
 }
 
 
