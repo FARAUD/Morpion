@@ -18,7 +18,7 @@ char remplir_grille (char grille[N][N+1]) {
         for (j=0;j<N;j++){
             grille[i][j]='-';
         }
-        grille[i][j+1]='\0';
+         grille[i][j+1]='\0';
     }
 
     return grille;
@@ -70,7 +70,7 @@ void jeu (char grille[N][N+1]) {
         
         printf ("\n");
         printf ("\n Ou voulez vouz jouer ? :\n ");
-        printf ("Entrer le numero de la ligne : ");
+        printf ("Entrer le numero de la ligne   : ");
         scanf ("%d",&i);
         printf ("Entrer le numero de la colonne : ");
         scanf ("%d",&j);
