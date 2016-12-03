@@ -67,8 +67,14 @@ void jeu (char grille[N][N+1]) {
 
     while (test (grille))
     {
-        printf ("\n Ou voulez vouz jouer ? : ");
-        scanf ("%d %d",&i,&j);
+        
+        printf ("\n");
+        printf ("\n Ou voulez vouz jouer ? :\n ");
+        printf ("Entrer le numero de la ligne : ");
+        scanf ("%d",&i);
+        printf ("Entrer le numero de la colonne : ");
+        scanf ("%d",&j);
+        
         if (grille[i-1][j-1]=='-' && i<=N && j<=N)
         {
             if (k%2==0){
